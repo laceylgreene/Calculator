@@ -44,5 +44,17 @@ var userBMI = function (height, weight){return ((weight*703)/(height*height))}
 alert ("Your BMI is " + userBMI(userHeight, userWeight).toFixed() + ".");
 
 
-
 //F to C: The temperature T in degrees Fahrenheit (°F) is equal to the temperature T in degrees Celsius (°C) times 9/5 plus 32:
+performFToC = confirm ("Would you like to convert from Fahrenheit to Celcius?");
+tempInF = parseInt(prompt ("What is the temperature in Fahrenheit?"));
+var FToC = function(tempInF) {return (tempInF-32)*5/9};
+if (performFToC=true){
+  alert ("The temperature in Celcius is " + FToC(tempInF).toFixed(1) + ".")
+}
+
+performCToF = confirm ("Would you like to convert from Celcius to Fahrenheit?")
+tempInC = parseInt(prompt ("What is the temperature in Celcius?"))
+var CToF = function(tempInC) {return tempInC*9/5+32};
+if (performCToF=true){
+  alert ("The temperature in Fahrenheit is " + CToF(tempInC).toFixed(1) + ".")
+}
